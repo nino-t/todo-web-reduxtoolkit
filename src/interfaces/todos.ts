@@ -4,3 +4,8 @@ export interface Todo {
   title: string
   completed: boolean
 }
+
+export interface TodoAppendState {
+  status: 'idle' | 'loading' | 'failed'
+  errorMessage: string | null
+}

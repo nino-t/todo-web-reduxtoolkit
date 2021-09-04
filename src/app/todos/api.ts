@@ -8,6 +8,6 @@ export const fetchTodoList = async () => {
     );
     return response.json();
   } catch (error) {
-    console.log('error', error);
+    throw(error);
   }
 };

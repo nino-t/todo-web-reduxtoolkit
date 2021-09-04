@@ -7,4 +7,4 @@ export const {
   selectEntities: selectTodoEntities,
   selectAll: selectAllTodos,
   selectTotal: selectTotalTodos,
-} = todosAdapter.getSelectors((state: RootState) => state.todos)
+} = todosAdapter.getSelectors((state: RootState) => state.todos);
