@@ -7,5 +7,5 @@ export interface Todo {
 
 export interface TodoAppendState {
   status: 'idle' | 'loading' | 'failed'
-  errorMessage: string | null
+  error: string | null
 }

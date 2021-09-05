@@ -11,3 +11,17 @@ export const fetchTodoList = async () => {
     throw(error);
   }
 };
+
+export const fetchTodoById = async (id: number) => {
+  try {
+    const response = await fetch(
+      `https://jsonplaceholder.typicode.com/todos/${id}`,
+      {
+        method: 'GET',
+      }
+    );
+    return response.json();
+  } catch (error) {
+    throw(error);
+  }
+};

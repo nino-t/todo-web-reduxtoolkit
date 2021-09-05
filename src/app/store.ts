@@ -3,6 +3,7 @@ import { createBrowserHistory, History } from 'history';
 import { connectRouter, routerMiddleware } from 'connected-react-router';
 import counterReducer from '../features/counter/counterSlice';
 import todosReducer from './todos/slice';
+import usersReducer from './users/slice';
 
 export const history: History = createBrowserHistory();
 
@@ -11,6 +12,7 @@ export const store = configureStore({
     router: connectRouter(history) as Reducer,
     counter: counterReducer,
     todos: todosReducer,
+    users: usersReducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(routerMiddleware(history)),
 });
